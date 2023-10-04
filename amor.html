@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<title>TE AMO</title>
+</head>
+<body>
+	<div id="vida">
+	<h1>ACEITA CASAR COMIGO?</h1>
+	<button class="btn" onclick="sim(this)">Sim</button>
+	<button class="btn" onclick="desvia(this)" onmouseover="desvia(this)">Não</button>
+	</div>
+</body>
+<style>
+	body {
+		font-family: sans-serif;
+	}
+	#vida{
+    background-color: pink;
+    width: 100%;
+    height: 100%;
+    top: auto;
+    position: fixed;
+    left: 0;
+    padding: 10px;
+	text-align: center;
+	}
+	.btn{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 80px;
+    border-radius: 5px;
+}	
+</style>
+<script>
+	function sim(sim){
+		var s = sim;
+		alert("Você aceitou a casar comigo <3 !!!!!!!!");
+	}
+	function desvia(t){
+		var btn = t;
+		btn.style.position = 'absolute';
+		btn.style.bottom = gerarPosicao(10, 50);
+		btn.style.left = gerarPosicao(10, 50);
+	}
+	function gerarPosicao(min, max){
+		return (Math.random() * (min - max) + max) + "%"; 
+	}
+   
+</script>
+</html>
